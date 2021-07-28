@@ -1,0 +1,152 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/Welcome5",
+    "definitions": {
+        "Welcome5": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "products": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Product"
+                    }
+                },
+                "operatingDays": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OperatingDay"
+                    }
+                },
+                "typeOfEstablishment": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TypeOfEstablishment"
+                    }
+                },
+                "videos": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TypeOfEstablishment"
+                    }
+                },
+                "dominios": {
+                    "$ref": "#/definitions/Dominios"
+                }
+            },
+            "required": [
+                "dominios",
+                "operatingDays",
+                "products",
+                "typeOfEstablishment",
+                "videos"
+            ],
+            "title": "Welcome5"
+        },
+        "Dominios": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "TIPO_LOGRADOURO": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OperatingDay"
+                    }
+                },
+                "SEXO": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TypeOfEstablishment"
+                    }
+                }
+            },
+            "required": [
+                "SEXO",
+                "TIPO_LOGRADOURO"
+            ],
+            "title": "Dominios"
+        },
+        "TypeOfEstablishment": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "label": {
+                    "type": "string",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                }
+            },
+            "required": [
+                "key",
+                "label",
+                "name"
+            ],
+            "title": "TypeOfEstablishment"
+        },
+        "OperatingDay": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "key": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "label": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "key",
+                "label",
+                "name"
+            ],
+            "title": "OperatingDay"
+        },
+        "Product": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "exibirRede": {
+                    "type": "boolean"
+                },
+                "adquirirCartao": {
+                    "type": "boolean"
+                },
+                "percentualCartao": {
+                    "type": "integer"
+                },
+                "produtoAlimentacao": {
+                    "type": "boolean"
+                },
+                "produtoRefeicao": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "adquirirCartao",
+                "exibirRede",
+                "id",
+                "nome",
+                "percentualCartao",
+                "produtoAlimentacao",
+                "produtoRefeicao"
+            ],
+            "title": "Product"
+        }
+    }
+}

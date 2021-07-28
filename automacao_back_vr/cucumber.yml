@@ -1,0 +1,7 @@
+default: -p no-source -p color -p pretty --publish
+
+no-source: --no-source
+color: --color
+pretty: --format pretty
+dot: --format progress
+
